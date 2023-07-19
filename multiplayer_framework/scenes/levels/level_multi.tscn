@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://blgv8lb45q3ss"]
+
+[ext_resource type="Script" path="res://multiplayer_framework/scenes/levels/level_multi.gd" id="1_efl4r"]
+
+[node name="lobby" type="Node2D"]
+script = ExtResource("1_efl4r")

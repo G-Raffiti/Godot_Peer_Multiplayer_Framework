@@ -1,0 +1,50 @@
+[gd_scene load_steps=2 format=3 uid="uid://esfcx5xqcmwv"]
+
+[ext_resource type="Script" path="res://multiplayer_framework/scenes/user_interface/ui_multiplayer.gd" id="1_tb4mg"]
+
+[node name="Multiplayer" type="Control" node_paths=PackedStringArray("multiplayer_menu", "host_btn", "join_btn", "scene_request", "request_label", "replie_yes", "replie_no")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_tb4mg")
+multiplayer_menu = NodePath("MultiplayerMenu")
+host_btn = NodePath("MultiplayerMenu/Host")
+join_btn = NodePath("MultiplayerMenu/Join")
+scene_request = NodePath("SceneRequest")
+request_label = NodePath("SceneRequest/RequestLabel")
+replie_yes = NodePath("SceneRequest/replie_yes")
+replie_no = NodePath("SceneRequest/replie_no")
+
+[node name="MultiplayerMenu" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Host" type="Button" parent="MultiplayerMenu"]
+layout_mode = 2
+text = "HOST"
+
+[node name="Join" type="Button" parent="MultiplayerMenu"]
+layout_mode = 2
+text = "JOIN"
+
+[node name="SceneRequest" type="VBoxContainer" parent="."]
+visible = false
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="RequestLabel" type="Label" parent="SceneRequest"]
+layout_mode = 2
+text = "player 15564 want to go to scene level_1 are you ready ?"
+
+[node name="replie_yes" type="Button" parent="SceneRequest"]
+layout_mode = 2
+text = "YES"
+
+[node name="replie_no" type="Button" parent="SceneRequest"]
+layout_mode = 2
+text = "NO"

@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://cf787ybn84v01"]
+
+[ext_resource type="Script" path="res://multiplayer_framework/scenes/player/player_multi.gd" id="1_01wgl"]
+
+[sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_s4uxf"]
+properties/0/path = NodePath(".:position")
+properties/0/spawn = true
+properties/0/sync = true
+properties/0/watch = false
+
+[node name="Player" type="CharacterBody2D"]
+collision_mask = 0
+script = ExtResource("1_01wgl")
+
+[node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="."]
+replication_config = SubResource("SceneReplicationConfig_s4uxf")
