@@ -12,5 +12,7 @@ properties/0/watch = false
 collision_mask = 0
 script = ExtResource("1_01wgl")
 
+[node name="Collision" type="CollisionShape2D" parent="."]
+
 [node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="."]
 replication_config = SubResource("SceneReplicationConfig_s4uxf")

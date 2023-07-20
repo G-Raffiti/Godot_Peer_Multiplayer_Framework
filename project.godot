@@ -11,13 +11,20 @@ config_version=5
 [application]
 
 config/name="Multiplayer"
-run/main_scene="res://multiplayer_framework/scenes/game/game_multiplayer.tscn"
+run/main_scene="res://sample_test/scenes/game.tscn"
 config/features=PackedStringArray("4.1", "GL Compatibility")
 config/icon="res://icon.svg"
 
 [autoload]
 
 SceneEventBus="*res://multiplayer_framework/global/global_scene_event_bus.gd"
+
+[display]
+
+window/size/window_width_override=576
+window/size/window_height_override=324
+window/stretch/mode="canvas_items"
+window/stretch/aspect="keep_width"
 
 [input]
 

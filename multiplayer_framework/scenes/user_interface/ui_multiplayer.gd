@@ -40,7 +40,7 @@ func display_request(player: Player_Multi, scene_name: String):
 	scene_request.show()
 
 func _on_replie_yes_pressed():
-	SceneEventBus.send('on_ui_replie_request', [last_scene_request, true])
+	SceneEventBus.on_ui_replie.emit(last_scene_request, true)
 	scene_request.hide()
 
 func _on_replie_no_pressed():
