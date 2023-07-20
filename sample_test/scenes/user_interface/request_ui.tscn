@@ -1,0 +1,49 @@
+[gd_scene load_steps=2 format=3 uid="uid://cthccqkmld5lg"]
+
+[ext_resource type="Script" path="res://sample_test/scenes/user_interface/request_ui.gd" id="1_g4lfo"]
+
+[node name="RequestUI" type="Control" node_paths=PackedStringArray("scene_request", "request_label", "replie_yes", "replie_no")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_g4lfo")
+scene_request = NodePath(".")
+request_label = NodePath("CenterContainer/PanelContainer/VBoxContainer/Label")
+replie_yes = NodePath("CenterContainer/PanelContainer/VBoxContainer/HBoxContainer/ButtonYes")
+replie_no = NodePath("CenterContainer/PanelContainer/VBoxContainer/HBoxContainer/ButtonNo")
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="CenterContainer"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer/PanelContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CenterContainer/PanelContainer/VBoxContainer"]
+layout_mode = 2
+text = "do you want to change scene ?"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CenterContainer/PanelContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="ButtonYes" type="Button" parent="CenterContainer/PanelContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "yes"
+
+[node name="ButtonNo" type="Button" parent="CenterContainer/PanelContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "no"

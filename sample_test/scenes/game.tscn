@@ -1,0 +1,24 @@
+[gd_scene load_steps=9 format=3 uid="uid://cvky0tswqsbgr"]
+
+[ext_resource type="PackedScene" uid="uid://bmhcelevs4jmd" path="res://multiplayer_framework/scenes/game/game_multiplayer.tscn" id="1_iycvi"]
+[ext_resource type="Script" path="res://sample_test/scenes/game.gd" id="2_1ovdd"]
+[ext_resource type="PackedScene" uid="uid://biaa4vj4q7shh" path="res://sample_test/scenes/player/player.tscn" id="2_lreg3"]
+[ext_resource type="PackedScene" uid="uid://kgmh80tcfm41" path="res://sample_test/scenes/levels/lobby.tscn" id="3_3xenc"]
+[ext_resource type="PackedScene" uid="uid://dy0lgacn8o1m0" path="res://sample_test/scenes/levels/level_1.tscn" id="4_p4n1e"]
+[ext_resource type="PackedScene" uid="uid://dfika664g2ga6" path="res://sample_test/scenes/levels/level_2.tscn" id="5_odcxy"]
+[ext_resource type="PackedScene" uid="uid://3gm5m7j6nhnf" path="res://sample_test/scenes/user_interface/main_menu.tscn" id="6_8umgf"]
+[ext_resource type="PackedScene" uid="uid://cthccqkmld5lg" path="res://sample_test/scenes/user_interface/request_ui.tscn" id="7_gonxr"]
+
+[node name="Game" instance=ExtResource("1_iycvi")]
+script = ExtResource("2_1ovdd")
+player_ps = ExtResource("2_lreg3")
+scenes = Array[PackedScene]([ExtResource("4_p4n1e"), ExtResource("5_odcxy"), ExtResource("3_3xenc")])
+
+[node name="MainMenu" parent="UI" index="0" instance=ExtResource("6_8umgf")]
+
+[node name="RequestUI" parent="UI" index="1" instance=ExtResource("7_gonxr")]
+visible = false
+
+[node name="Label" type="Label" parent="UI" index="2"]
+offset_right = 40.0
+offset_bottom = 23.0

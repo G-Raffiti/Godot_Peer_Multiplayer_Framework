@@ -1,0 +1,32 @@
+[gd_scene load_steps=3 format=3 uid="uid://kgmh80tcfm41"]
+
+[ext_resource type="PackedScene" uid="uid://blgv8lb45q3ss" path="res://multiplayer_framework/scenes/levels/level_multi.tscn" id="1_lwdj7"]
+[ext_resource type="PackedScene" uid="uid://dimtukopqf7ks" path="res://sample_test/scenes/objects/door.tscn" id="2_0sr2n"]
+
+[node name="lobby" instance=ExtResource("1_lwdj7")]
+
+[node name="Label" type="Label" parent="." index="0"]
+offset_left = 493.0
+offset_top = 70.0
+offset_right = 726.0
+offset_bottom = 169.0
+theme_override_font_sizes/font_size = 70
+text = "Lobby"
+
+[node name="Label2" type="Label" parent="." index="1"]
+offset_left = 39.0
+offset_top = 324.0
+offset_right = 272.0
+offset_bottom = 423.0
+theme_override_font_sizes/font_size = 70
+text = "to 1"
+
+[node name="door" parent="SpawnPoints" index="0" instance=ExtResource("2_0sr2n")]
+position = Vector2(102, 504)
+destination = "level_2"
+
+[node name="level_2" type="Marker2D" parent="SpawnPoints/Players" index="0"]
+position = Vector2(197, 295)
+
+[node name="main_menu" type="Marker2D" parent="SpawnPoints/Players" index="1"]
+position = Vector2(972, 266)
