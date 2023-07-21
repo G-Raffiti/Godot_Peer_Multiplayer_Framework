@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://bswn3cn1apvbo"]
+
+[ext_resource type="Script" path="res://sample_test/scenes/objects/collectible.gd" id="1_2oywy"]
+[ext_resource type="Texture2D" uid="uid://daj3fqlt341yj" path="res://sample_test/art/item.png" id="1_7mlvi"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ncm7l"]
+radius = 63.0079
+
+[node name="collectible" type="Area2D"]
+script = ExtResource("1_2oywy")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_ncm7l")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(1, 0.878431, 0.266667, 1)
+texture = ExtResource("1_7mlvi")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

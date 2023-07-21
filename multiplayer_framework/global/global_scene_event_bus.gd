@@ -1,4 +1,5 @@
 extends Node
+signal on_points_changed(point_amount: int)
 
 const HOST: int = 1
 

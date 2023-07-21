@@ -30,6 +30,7 @@ theme_override_font_sizes/font_size = 70
 text = "to 1"
 
 [node name="door" parent="." index="4" instance=ExtResource("2_6y2hj")]
+position = Vector2(78, 295)
 destination = "level_1"
 
 [node name="door2" parent="." index="5" instance=ExtResource("2_6y2hj")]
@@ -43,13 +44,16 @@ position = Vector2(249, 291)
 position = Vector2(906, 298)
 
 [node name="random|" type="Marker2D" parent="SpawnPoints/Units" index="0"]
-position = Vector2(378, 123)
+position = Vector2(486, 258)
 
 [node name="random|2" type="Marker2D" parent="SpawnPoints/Units" index="1"]
-position = Vector2(378, 123)
+position = Vector2(637, 199)
 
 [node name="random|3" type="Marker2D" parent="SpawnPoints/Units" index="2"]
 position = Vector2(378, 123)
 
 [node name="random|4" type="Marker2D" parent="SpawnPoints/Units" index="3"]
-position = Vector2(378, 123)
+position = Vector2(527, 460)
+
+[node name="random|5" type="Marker2D" parent="SpawnPoints/Units" index="4"]
+position = Vector2(527, 460)
