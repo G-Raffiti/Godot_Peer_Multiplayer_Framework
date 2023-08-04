@@ -2,16 +2,22 @@
 
 [ext_resource type="Script" path="res://multiplayer_framework/scenes/levels/level_multi.gd" id="1_efl4r"]
 
-[node name="Level" type="Node2D" node_paths=PackedStringArray("player_spawn_points", "unit_spawn_points", "units")]
+[node name="Level" type="Node2D" node_paths=PackedStringArray("player_spawn_points", "unit_spawn_points", "object_spawn_points", "units", "objects")]
 script = ExtResource("1_efl4r")
 player_spawn_points = NodePath("SpawnPoints/Players")
 unit_spawn_points = NodePath("SpawnPoints/Units")
+object_spawn_points = NodePath("SpawnPoints/Objects")
 units = NodePath("Units")
+objects = NodePath("Objects")
 
 [node name="Units" type="Node2D" parent="."]
+
+[node name="Objects" type="Node2D" parent="."]
 
 [node name="SpawnPoints" type="Node2D" parent="."]
 
 [node name="Players" type="Node2D" parent="SpawnPoints"]
 
 [node name="Units" type="Node2D" parent="SpawnPoints"]
+
+[node name="Objects" type="Node2D" parent="SpawnPoints"]

@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://kgmh80tcfm41"]
 
 [ext_resource type="PackedScene" uid="uid://blgv8lb45q3ss" path="res://multiplayer_framework/scenes/levels/level_multi.tscn" id="1_lwdj7"]
-[ext_resource type="PackedScene" uid="uid://dimtukopqf7ks" path="res://sample_test/scenes/objects/door.tscn" id="2_0sr2n"]
+[ext_resource type="PackedScene" uid="uid://dimtukopqf7ks" path="res://sample_test/objects/door.tscn" id="2_0sr2n"]
 
 [node name="lobby" instance=ExtResource("1_lwdj7")]
 

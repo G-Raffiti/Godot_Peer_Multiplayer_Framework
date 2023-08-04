@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://cnoidnayk5alt"]
 
-[ext_resource type="Script" path="res://sample_test/scenes/units/mob_1.gd" id="1_b0thq"]
-[ext_resource type="Texture2D" uid="uid://bbr6ggxtepy8v" path="res://icon.svg" id="2_t6qcp"]
+[ext_resource type="Script" path="res://sample_test/units/mob_1.gd" id="1_cqu0u"]
+[ext_resource type="Texture2D" uid="uid://bbr6ggxtepy8v" path="res://icon.svg" id="2_vqpmq"]
 
 [sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_y33jp"]
 properties/0/path = NodePath(".:position")
@@ -13,12 +13,12 @@ properties/0/watch = false
 size = Vector2(30, 132)
 
 [node name="mob_1" type="CharacterBody2D"]
-script = ExtResource("1_b0thq")
+script = ExtResource("1_cqu0u")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 modulate = Color(1, 0.188235, 1, 1)
 scale = Vector2(0.187097, 1)
-texture = ExtResource("2_t6qcp")
+texture = ExtResource("2_vqpmq")
 
 [node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="."]
 replication_config = SubResource("SceneReplicationConfig_y33jp")

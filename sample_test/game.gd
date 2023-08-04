@@ -11,8 +11,5 @@ func _on_join_game() -> void:
 func virtual_add_player(_player: Node, _id: int) -> void:
 	return
 
-func virtual_add_scene(_scene_name: String) -> void:
-	return
-
-func virtual_scene_added(scene_name: String) -> void:
-	current_scene = scene_name
+func virtual_level_added(scene_name: String) -> void:
+	current_level_name = scene_name

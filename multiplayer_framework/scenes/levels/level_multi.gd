@@ -3,7 +3,9 @@ class_name Level_Multi
 
 @export var player_spawn_points: Node2D
 @export var unit_spawn_points: Node2D
+@export var object_spawn_points: Node2D
 @export var units: Node2D
+@export var objects: Node2D
 
 func change_zone(player_body: Player_Multi, scene_name: String):
 	SceneEventBus.on_change_level_triggered.emit(player_body, scene_name)
@@ -21,4 +23,12 @@ func get_spawn_units() -> Array:
 		if 'position' in point:
 			var unit_name: String = point.name.substr(0, point.name.find('|'))
 			spawn_points.append([point.position, unit_name])
+	return spawn_points
+
+func get_spawn_objects() -> Array:
+	var spawn_points: Array = []
+	for point in object_spawn_points.get_children():
+		if 'position' in point:
+			var object_name: String = point.name.substr(0, point.name.find('|'))
+			spawn_points.append([point.position, object_name])
 	return spawn_points

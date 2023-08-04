@@ -1,16 +1,16 @@
 [gd_scene load_steps=4 format=3 uid="uid://biaa4vj4q7shh"]
 
-[ext_resource type="PackedScene" uid="uid://cf787ybn84v01" path="res://multiplayer_framework/scenes/player/player_multi.tscn" id="1_qbwmx"]
-[ext_resource type="Texture2D" uid="uid://bbr6ggxtepy8v" path="res://icon.svg" id="2_slr3n"]
+[ext_resource type="PackedScene" uid="uid://cf787ybn84v01" path="res://multiplayer_framework/scenes/player/player_multi.tscn" id="1_y24qp"]
+[ext_resource type="Texture2D" uid="uid://bbr6ggxtepy8v" path="res://icon.svg" id="2_212iq"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_1jvoq"]
 resource_local_to_scene = true
 radius = 57.0789
 
-[node name="Player" instance=ExtResource("1_qbwmx")]
+[node name="Player" instance=ExtResource("1_y24qp")]
 
 [node name="Sprite2D" type="Sprite2D" parent="." index="0"]
-texture = ExtResource("2_slr3n")
+texture = ExtResource("2_212iq")
 
 [node name="Collision" parent="." index="1"]
 shape = SubResource("CircleShape2D_1jvoq")

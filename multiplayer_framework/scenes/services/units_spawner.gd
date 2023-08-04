@@ -1,7 +1,8 @@
 extends Node
+class_name UnitSpawner
 
 @export var unit_spawner: MultiplayerSpawner
-@export var units: Array[PackedScene]
+var units: Array[PackedScene]
 var units_dict: Dictionary
 var units_in_levels: Dictionary
 

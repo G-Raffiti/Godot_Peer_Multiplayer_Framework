@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://3gm5m7j6nhnf"]
 
-[ext_resource type="Script" path="res://sample_test/scenes/user_interface/main_menu.gd" id="1_8ptpd"]
+[ext_resource type="Script" path="res://sample_test/user_interface/main_menu.gd" id="1_8ptpd"]
 
 [node name="MainMenu" type="Control" node_paths=PackedStringArray("multiplayer_menu", "host_btn", "join_btn")]
 layout_mode = 3

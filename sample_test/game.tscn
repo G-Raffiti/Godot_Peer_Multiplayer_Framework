@@ -1,0 +1,26 @@
+[gd_scene load_steps=10 format=3 uid="uid://ofjcnjf3uoa3"]
+
+[ext_resource type="PackedScene" uid="uid://bmhcelevs4jmd" path="res://multiplayer_framework/scenes/game/game_multiplayer.tscn" id="1_iycvi"]
+[ext_resource type="Script" path="res://sample_test/game.gd" id="2_5j33m"]
+[ext_resource type="PackedScene" uid="uid://biaa4vj4q7shh" path="res://sample_test/player/player.tscn" id="3_d4c6u"]
+[ext_resource type="PackedScene" uid="uid://3gm5m7j6nhnf" path="res://sample_test/user_interface/main_menu.tscn" id="4_elgpv"]
+[ext_resource type="PackedScene" uid="uid://dy0lgacn8o1m0" path="res://sample_test/levels/level_1.tscn" id="4_f6qr3"]
+[ext_resource type="PackedScene" uid="uid://cthccqkmld5lg" path="res://sample_test/user_interface/request_ui.tscn" id="5_2hy3e"]
+[ext_resource type="PackedScene" uid="uid://dfika664g2ga6" path="res://sample_test/levels/level_2.tscn" id="5_oyfbb"]
+[ext_resource type="PackedScene" uid="uid://kgmh80tcfm41" path="res://sample_test/levels/lobby.tscn" id="6_6dbrf"]
+[ext_resource type="PackedScene" uid="uid://cnoidnayk5alt" path="res://sample_test/units/mob_1.tscn" id="7_6sbx7"]
+
+[node name="sample_game" instance=ExtResource("1_iycvi")]
+script = ExtResource("2_5j33m")
+player_ps = ExtResource("3_d4c6u")
+levels_ps = Array[PackedScene]([ExtResource("4_f6qr3"), ExtResource("5_oyfbb"), ExtResource("6_6dbrf")])
+units_ps = Array[PackedScene]([ExtResource("7_6sbx7")])
+
+[node name="MainMenu" parent="UI" index="0" instance=ExtResource("4_elgpv")]
+
+[node name="RequestUI" parent="UI" index="1" instance=ExtResource("5_2hy3e")]
+visible = false
+
+[node name="Label" type="Label" parent="UI" index="2"]
+offset_right = 40.0
+offset_bottom = 23.0

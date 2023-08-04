@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://b7m8s4flnxtp7"]
+
+[ext_resource type="Script" path="res://sample_test/objects/container/container.gd" id="1_qlg6s"]
+[ext_resource type="PackedScene" uid="uid://chhnp87f87g67" path="res://sample_test/objects/loot/item.tscn" id="2_w0d23"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7683n"]
+size = Vector2(200, 200)
+
+[node name="container" type="Area2D" node_paths=PackedStringArray("spawn_pos")]
+script = ExtResource("1_qlg6s")
+loot_ps = ExtResource("2_w0d23")
+spawn_pos = NodePath("Marker2D")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_7683n")
+debug_color = Color(0, 0.65098, 0.0509804, 0.419608)
+
+[node name="Marker2D" type="Marker2D" parent="."]
+position = Vector2(259, 109)
+
+[node name="Timer" type="Timer" parent="."]

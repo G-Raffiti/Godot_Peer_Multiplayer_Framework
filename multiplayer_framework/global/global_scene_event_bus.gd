@@ -9,12 +9,13 @@ signal on_ui_join_pressed()
 # Scene Transition Signals
 signal on_change_level_triggered(player: Player_Multi, scene_name: String)
 signal on_ui_replie_request(params: Array) #params Array[scene:String, answer:bool, player_name:String]
-signal add_scene(scene_name: String)
+signal add_level(scene_name: String)
 signal disable_players(empty_param)
 signal on_level_spawn_point(spawn_point: Vector2)
 signal on_game_quit_level(current_level: Level_Multi)
 signal on_game_level_init(level_name: String)
 signal on_game_level_spawned(current_level: Level_Multi)
+signal on_loot_spawn(loot_ps: PackedScene, spawn_pos: Vector2, for_every_one: bool)
 
 func send_clients(sig_name: String, params = null):
 	if not sig_name in self:
