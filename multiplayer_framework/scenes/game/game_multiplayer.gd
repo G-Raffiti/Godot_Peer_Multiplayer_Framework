@@ -7,7 +7,7 @@ class_name Game_Multi
 
 var peer = ENetMultiplayerPeer.new()
 var HOST: int = 1
-var PORT: int = 135
+var PORT: int = 8080
 var IP_HOST: String = 'localhost'
 
 var player_amount = 0

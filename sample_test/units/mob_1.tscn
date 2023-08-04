@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://cnoidnayk5alt"]
 
-[ext_resource type="Script" path="res://sample_test/units/mob_1.gd" id="1_cqu0u"]
-[ext_resource type="Texture2D" uid="uid://bbr6ggxtepy8v" path="res://icon.svg" id="2_vqpmq"]
+[ext_resource type="Script" path="res://sample_test/scenes/units/mob_1.gd" id="1_b0thq"]
+[ext_resource type="Texture2D" uid="uid://1bavyq11v0c8" path="res://sample_test/art/mob.png" id="2_443dj"]
 
 [sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_y33jp"]
 properties/0/path = NodePath(".:position")
@@ -10,15 +10,14 @@ properties/0/sync = true
 properties/0/watch = false
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_k5jjr"]
-size = Vector2(30, 132)
+size = Vector2(60, 94)
 
 [node name="mob_1" type="CharacterBody2D"]
-script = ExtResource("1_cqu0u")
+script = ExtResource("1_b0thq")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-modulate = Color(1, 0.188235, 1, 1)
-scale = Vector2(0.187097, 1)
-texture = ExtResource("2_vqpmq")
+scale = Vector2(0.06, 0.06)
+texture = ExtResource("2_443dj")
 
 [node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="."]
 replication_config = SubResource("SceneReplicationConfig_y33jp")
@@ -26,6 +25,7 @@ replication_config = SubResource("SceneReplicationConfig_y33jp")
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, 8)
 shape = SubResource("RectangleShape2D_k5jjr")
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

@@ -1,18 +1,11 @@
 [gd_scene load_steps=3 format=3 uid="uid://dfika664g2ga6"]
 
 [ext_resource type="PackedScene" uid="uid://blgv8lb45q3ss" path="res://multiplayer_framework/scenes/levels/level_multi.tscn" id="1_rch71"]
-[ext_resource type="PackedScene" uid="uid://dimtukopqf7ks" path="res://sample_test/objects/door.tscn" id="2_6y2hj"]
+[ext_resource type="PackedScene" uid="uid://dimtukopqf7ks" path="res://sample_test/scenes/objects/door.tscn" id="2_6y2hj"]
 
 [node name="level_2" instance=ExtResource("1_rch71")]
 
-[node name="door" parent="Objects" index="0" instance=ExtResource("2_6y2hj")]
-destination = "level_1"
-
-[node name="door2" parent="Objects" index="1" instance=ExtResource("2_6y2hj")]
-position = Vector2(1068, 297)
-destination = "lobby"
-
-[node name="Label" type="Label" parent="Objects" index="2"]
+[node name="Label" type="Label" parent="." index="0"]
 offset_left = 493.0
 offset_top = 70.0
 offset_right = 726.0
@@ -20,7 +13,7 @@ offset_bottom = 169.0
 theme_override_font_sizes/font_size = 70
 text = "Level 2"
 
-[node name="Label2" type="Label" parent="Objects" index="3"]
+[node name="Label2" type="Label" parent="." index="1"]
 offset_left = 855.0
 offset_top = 391.0
 offset_right = 1133.0
@@ -28,13 +21,21 @@ offset_bottom = 490.0
 theme_override_font_sizes/font_size = 70
 text = "to lobby"
 
-[node name="Label3" type="Label" parent="Objects" index="4"]
+[node name="Label3" type="Label" parent="." index="2"]
 offset_left = 25.0
 offset_top = 378.0
 offset_right = 258.0
 offset_bottom = 477.0
 theme_override_font_sizes/font_size = 70
 text = "to 1"
+
+[node name="door" parent="." index="4" instance=ExtResource("2_6y2hj")]
+position = Vector2(78, 295)
+destination = "level_1"
+
+[node name="door2" parent="." index="5" instance=ExtResource("2_6y2hj")]
+position = Vector2(1068, 297)
+destination = "lobby"
 
 [node name="level_1" type="Marker2D" parent="SpawnPoints/Players" index="0"]
 position = Vector2(249, 291)
@@ -43,13 +44,16 @@ position = Vector2(249, 291)
 position = Vector2(906, 298)
 
 [node name="random|" type="Marker2D" parent="SpawnPoints/Units" index="0"]
-position = Vector2(378, 123)
+position = Vector2(486, 258)
 
 [node name="random|2" type="Marker2D" parent="SpawnPoints/Units" index="1"]
-position = Vector2(378, 123)
+position = Vector2(637, 199)
 
 [node name="random|3" type="Marker2D" parent="SpawnPoints/Units" index="2"]
 position = Vector2(378, 123)
 
 [node name="random|4" type="Marker2D" parent="SpawnPoints/Units" index="3"]
-position = Vector2(378, 123)
+position = Vector2(527, 460)
+
+[node name="random|5" type="Marker2D" parent="SpawnPoints/Units" index="4"]
+position = Vector2(527, 460)

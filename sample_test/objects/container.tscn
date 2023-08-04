@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://bt0dphopsej1y"]
+
+[ext_resource type="Script" path="res://sample_test/scenes/objects/container.gd" id="1_q7sdj"]
+[ext_resource type="Texture2D" uid="uid://bc51ys2o82nrj" path="res://sample_test/art/box_base.png" id="1_ympkc"]
+[ext_resource type="Texture2D" uid="uid://ddlnu27uhlm4r" path="res://sample_test/art/box_top.png" id="2_7hooo"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_msbe3"]
+size = Vector2(354, 118)
+
+[node name="container" type="Area2D"]
+script = ExtResource("1_q7sdj")
+
+[node name="BoxBase" type="Sprite2D" parent="."]
+texture = ExtResource("1_ympkc")
+
+[node name="BoxTop" type="Sprite2D" parent="."]
+texture = ExtResource("2_7hooo")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, 139)
+shape = SubResource("RectangleShape2D_msbe3")
+
+[node name="Timer" type="Timer" parent="."]
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

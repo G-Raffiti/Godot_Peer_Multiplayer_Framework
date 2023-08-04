@@ -1,21 +1,30 @@
-[gd_scene load_steps=3 format=3 uid="uid://dimtukopqf7ks"]
+[gd_scene load_steps=5 format=3 uid="uid://dimtukopqf7ks"]
 
-[ext_resource type="Script" path="res://sample_test/objects/door.gd" id="1_qflab"]
+[ext_resource type="Script" path="res://sample_test/scenes/objects/door.gd" id="1_qflab"]
+[ext_resource type="Texture2D" uid="uid://chkk6nj4embb8" path="res://sample_test/art/door.png" id="2_meqh0"]
+[ext_resource type="Texture2D" uid="uid://daj3fqlt341yj" path="res://sample_test/art/item.png" id="3_66jfi"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_pun56"]
-resource_local_to_scene = true
-size = Vector2(109, 175)
+[sub_resource type="CircleShape2D" id="CircleShape2D_jrqts"]
+radius = 84.1487
 
 [node name="door" type="Area2D"]
-position = Vector2(96, 291)
 script = ExtResource("1_qflab")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 1)
-shape = SubResource("RectangleShape2D_pun56")
+shape = SubResource("CircleShape2D_jrqts")
 
 [node name="Timer" type="Timer" parent="."]
 one_shot = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_meqh0")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+modulate = Color(0.560784, 1, 1, 1)
+position = Vector2(1, -1)
+scale = Vector2(1.37413, 1.37413)
+texture = ExtResource("3_66jfi")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="body_exited" from="." to="." method="_on_body_exited"]
